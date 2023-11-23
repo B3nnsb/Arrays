@@ -1,6 +1,6 @@
-//                  0   1   2   3   4
-let circleSizes = [50, 75, 30, 45, 82]
-let circleIndex = 0; 
+//                  
+let words = ["Plymouth","is", "Awesome"]
+let wordIndex = 0; 
 
 function setup() {
     var canvas = createCanvas(800, 800);
@@ -11,15 +11,21 @@ function draw() {
     background(220);
 
     fill(255, 255, 255);
-    ellipse(width/2, height/2, circleSizes[circleIndex]);
+
+    textSize(32)
+    fill(255);
+    stroke(0);
+    strokeWeight(4);
+    text(words[wordIndex], mouseX, mouseY)
 
 }
 
 function mousePressed(){
 
-    circleIndex++
-    if(circleIndex == circleSizes. length){
-        circleIndex = 0;
+    wordIndex++
+    if(wordIndex == words. length){
+        wordIndex = 0;
+
     }
 
 }
