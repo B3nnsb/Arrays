@@ -1,31 +1,34 @@
-//                  
-let words = ["Plymouth","is", "Awesome"]
-let wordIndex = 0; 
+let circleArr = [];
 
 function setup() {
     var canvas = createCanvas(800, 800);
     canvas.parent("p5container");
+
+    background(220);
+    for(i=0; i<25; i++){
+       var circleObj = {
+             x: random(width),
+             y: random(height),
+             r: 30
+
+       } ; circleArr.push(circleObj)
+       
+       
+      
+       
+    }
+   for(var j =0; j< circleArr. length; j++){
+
+         ellipse(circleArr[j].x, circleArr[j].y, circleArr[j].r)
+       }
 }
 
 function draw() {
-    background(220);
+    
 
-    fill(255, 255, 255);
-
-    textSize(32)
-    fill(255);
-    stroke(0);
-    strokeWeight(4);
-    text(words[wordIndex], mouseX, mouseY)
+   
 
 }
 
-function mousePressed(){
 
-    wordIndex++
-    if(wordIndex == words. length){
-        wordIndex = 0;
 
-    }
-
-}
